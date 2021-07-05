@@ -57,7 +57,9 @@ class BarcodeScannerViewController: UIViewController {
     #if targetEnvironment(simulator)
     view.backgroundColor = .lightGray
     #endif
-    
+
+    navigationItem.title = config.strings["title"] ?? navigationItem.title;
+
     previewView = UIView(frame: view.bounds)
     if let previewView = previewView {
       previewView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
